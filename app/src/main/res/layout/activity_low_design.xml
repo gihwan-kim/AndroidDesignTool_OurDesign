@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LowDesignActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="379dp"
+                android:layout_height="644dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/low_design"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        <include-->
+        <!--            android:id="@+id/include"-->
+        <!--            layout="@layout/low_design_bottom_sheet"-->
+        <!--            app:layout_anchorGravity="top|center" />-->
+        <LinearLayout
+            android:id="@+id/standardBottomSheet"
+            style="@style/bottom_sheet_row_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="?actionBarSize"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/toggleButton"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/ic_expand_less_black_36dp"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+                <TextView
+                    android:id="@+id/editTool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Tool"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/bottom_sheet_row_style"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        style="@style/bottom_sheet_element_image_style"
+                        android:contentDescription="@string/text"
+                        android:src="@drawable/ic_text_format_black_48dp" />
+
+                    <TextView
+                        style="@style/bottom_sheet_element_text_style"
+                        android:text="@string/text" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/bottom_sheet_row_style">
+
+                    <ImageView
+                        style="@style/bottom_sheet_element_image_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/text"
+                        android:src="@drawable/ic_text_format_black_48dp" />
+
+                    <TextView
+                        style="@style/bottom_sheet_element_text_style"
+                        android:text="@string/image_size" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/bottom_sheet_row_style">
+
+                    <ImageView
+                        style="@style/bottom_sheet_element_image_style"
+                        android:src="@drawable/ic_text_format_black_48dp" />
+
+                    <TextView
+                        style="@style/bottom_sheet_element_text_style"
+                        android:text="@string/template" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/bottom_sheet_row_style"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        style="@style/bottom_sheet_element_image_style"
+                        android:contentDescription="@string/text"
+                        android:src="@drawable/ic_text_format_black_48dp" />
+
+                    <TextView
+                        style="@style/bottom_sheet_element_text_style"
+                        android:text="@string/text" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/bottom_sheet_row_style">
+
+                    <ImageView
+                        style="@style/bottom_sheet_element_image_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/text"
+                        android:src="@drawable/ic_text_format_black_48dp" />
+
+                    <TextView
+                        style="@style/bottom_sheet_element_text_style"
+                        android:text="@string/image_size" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/bottom_sheet_row_style">
+
+                    <ImageView
+                        style="@style/bottom_sheet_element_image_style"
+                        android:src="@drawable/ic_text_format_black_48dp" />
+
+                    <TextView
+                        style="@style/bottom_sheet_element_text_style"
+                        android:text="@string/template" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

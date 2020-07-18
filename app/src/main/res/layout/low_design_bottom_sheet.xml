@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    app:behavior_hideable : 아래로 당겨서 감출 수 있는지
+    app:behavior_peekHeight : bottom sheet 이 펼쳐졌을때 높이 ( 밑에서부터 얼만큼 띄워져있는지)
+        0dp 일 경우 밑에 바닥에 붙어있음
+-->
+<!--
+    [ LinearLayout 일때... ]
+        weight : 공간 분할
+            여러개의 view 를 특정한 비례에 맞춰서 배치하고 싶을 경우
+        gravity : 정렬 방향
+            LinearLayout 안에 든 view 는 방향을 지정하여 정렬할 수 있다.
+            view 를 정렬할 때는 layout_gravity와 gravity 속성을 사용한다.
+                layout_gravity : view 의 위치
+                gravity : view 에 든 내용물들의 위치
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/standardBottomSheet"
+    style="@style/bottom_sheet_row_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="?actionBarSize"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_expand_less_black_36dp"
+            android:textOff=""
+            android:textOn=""
+            android:text="" />
+
+        <TextView
+            android:id="@+id/editTool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Tool"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/bottom_sheet_row_style"
+            android:layout_gravity="center">
+
+            <ImageView
+                style="@style/bottom_sheet_element_image_style"
+                android:contentDescription="@string/text"
+                android:src="@drawable/ic_text_format_black_48dp" />
+
+            <TextView
+                style="@style/bottom_sheet_element_text_style"
+                android:text="@string/text" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/bottom_sheet_row_style">
+
+            <ImageView
+                style="@style/bottom_sheet_element_image_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/text"
+                android:src="@drawable/ic_text_format_black_48dp" />
+
+            <TextView
+                style="@style/bottom_sheet_element_text_style"
+                android:text="@string/image_size" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/bottom_sheet_row_style">
+
+            <ImageView
+                style="@style/bottom_sheet_element_image_style"
+                android:src="@drawable/ic_text_format_black_48dp" />
+
+            <TextView
+                style="@style/bottom_sheet_element_text_style"
+                android:text="@string/template" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/bottom_sheet_row_style"
+            android:layout_gravity="center">
+
+            <ImageView
+                style="@style/bottom_sheet_element_image_style"
+                android:contentDescription="@string/text"
+                android:src="@drawable/ic_text_format_black_48dp" />
+
+            <TextView
+                style="@style/bottom_sheet_element_text_style"
+                android:text="@string/text" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/bottom_sheet_row_style">
+
+            <ImageView
+                style="@style/bottom_sheet_element_image_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/text"
+                android:src="@drawable/ic_text_format_black_48dp" />
+
+            <TextView
+                style="@style/bottom_sheet_element_text_style"
+                android:text="@string/image_size" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/bottom_sheet_row_style">
+
+            <ImageView
+                style="@style/bottom_sheet_element_image_style"
+                android:src="@drawable/ic_text_format_black_48dp" />
+
+            <TextView
+                style="@style/bottom_sheet_element_text_style"
+                android:text="@string/template" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_account_circle_24px"
+        android:title="@string/personal" />
+    <item
+        android:id="@+id/highDesignFragment"
+        android:icon="@drawable/ic_architecture_24px"
+        android:title="@string/high_design" />
+    <item
+        android:id="@+id/lowDesignFragment"
+        android:icon="@drawable/ic_edit_24px"
+        android:title="@string/low_design" />
+    <item
+        android:id="@+id/templateFragment"
+        android:icon="@drawable/ic_storefront_24px"
+        android:title="@string/template" />
+</menu>

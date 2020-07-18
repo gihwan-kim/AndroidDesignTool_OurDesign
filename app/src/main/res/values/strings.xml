@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OurDesign</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="high_design">High Design</string>
+    <string name="low_design">Low Design</string>
+    <string name="template">Template</string>
+    <string name="personal">계정</string>
+    <string name="text">Text</string>
+    <string name="image_size">Image Size</string>
+    <string name="edit_tool">Edit Tool</string>
+</resources>
