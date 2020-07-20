@@ -21,6 +21,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [TitleFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+const val EXTRA_MESSAGE = "com.example.ourdesign.MESSAGE"
 class TitleFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null

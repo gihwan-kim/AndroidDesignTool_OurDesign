@@ -10,7 +10,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.ourdesign.databinding.ActivityMainBinding
 
-const val EXTRA_MESSAGE = "com.example.ourdesign.MESSAGE"
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var drawerLayout: DrawerLayout
