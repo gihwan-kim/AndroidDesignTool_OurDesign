@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    https://developer.android.com/training/appbar/actions
+    app:showAsAction : item 을 Tool bar 에서 버튼으로 표시할지 여부를 지정한다.
+        ifRoom = Tool bar 에 공간이 있을 경우 버튼으로 표시, 공간이 부족하면 더보기 메뉴로 보내짐
+        never = 작업은 Tool bar 에 표시되지 않고 항상 더보기 메뉴에서 보여짐
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/actionToNextPage"
+        android:icon="@drawable/ic_check_circle_outline_black_36dp"
+        android:title="확인"
+        app:showAsAction="ifRoom" />
+</menu>

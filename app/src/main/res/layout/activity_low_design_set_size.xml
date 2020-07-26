@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--    app:behavior_peekHeight을 통해 기본 높이를 설정할 수 있습니다.-->
+    <!--    app:behavior_hideable을 통해 항상 표시하는 BottomSheet을 정의할 수 있습니다.-->
+    <!--    항상 표시되는 경우는 peekHeight의 높이만큼 표시됩니다.-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LowDesign.LowDesignSetSizeActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/lowDesignToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/low_design"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img1" />
+
+        <LinearLayout
+            android:id="@+id/standardBottomSheet"
+            style="@style/bottom_sheet_row_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="?actionBarSize"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                style="@style/bottom_sheet_row_style"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:id="@+id/customImageSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_tune_black_36dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="212dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/LowDesignRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

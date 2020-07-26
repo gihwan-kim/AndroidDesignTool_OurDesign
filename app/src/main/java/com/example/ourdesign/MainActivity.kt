@@ -1,9 +1,7 @@
 package com.example.ourdesign
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
@@ -29,7 +27,6 @@ class MainActivity : AppCompatActivity() {
 
         // drawer navigation bar
         NavigationUI.setupWithNavController(binding.navView, navController)
-
 
     }
 

@@ -8,7 +8,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".LowDesignActivity">
-
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/lowDesignToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
@@ -19,9 +26,7 @@
                 android:layout_width="379dp"
                 android:layout_height="644dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
                 android:contentDescription="@string/low_design"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

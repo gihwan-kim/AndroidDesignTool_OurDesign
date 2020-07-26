@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.example.ourdesign.LowDesign.LowDesignSetSizeActivity
 import com.example.ourdesign.databinding.FragmentTitleBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -21,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [TitleFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-const val EXTRA_MESSAGE = "com.example.ourdesign.MESSAGE"
+
 class TitleFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -42,10 +43,7 @@ class TitleFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
             R.layout.fragment_title, container, false)
-        binding.highDesignButton.setOnClickListener { view : View ->
-            Log.i("wow", "design button!!")
-            view.findNavController().navigate(R.id.action_titleFragment_to_highDesignFragment)
-        }
+
 //        binding.lowDesignButton.setOnClickListener { view : View ->
 //            view.findNavController().navigate(R.id.action_titleFragment_to_lowDesignFragment)
 //        }
@@ -58,15 +56,19 @@ class TitleFragment : Fragment() {
          *          -> 앱이 다른 앱과 상호작용하는 경우 키가 고유하게 유지됨
          * startActivity() : Intent 로 지정된 activity 의 인스턴스를 시작한다.
          */
+        // title -> Low-Design : set image size page
         binding.lowDesignButton.setOnClickListener { view : View ->
-            Log.i("hello", "intent 를 사용하여 이동하였습니다.")
-            val message = "hello"
-            val intent = Intent(activity, LowDesignActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, message)
-            }
+            Log.i("hello", "intent 를 사용하여 Low-Design image size page 로 이동하였습니다.")
+            val intent = Intent(activity, LowDesignSetSizeActivity::class.java)
             startActivity(intent)
         }
 
+        // title -> high design
+        binding.highDesignButton.setOnClickListener { view : View ->
+            Log.i("wow", "design button!!")
+            view.findNavController().navigate(R.id.action_titleFragment_to_highDesignFragment)
+        }
+        // title -> template
         binding.templateButton.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_titleFragment_to_templateFragment)
         }

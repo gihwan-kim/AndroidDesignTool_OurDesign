@@ -11,10 +11,6 @@
         android:orientation="vertical">
         <!-- TODO: Update blank fragment layout -->
 
-        <!--        <include-->
-<!--            android:id="@+id/include"-->
-<!--            layout="@layout/low_design_bottom_sheet"-->
-<!--            app:layout_anchorGravity="top|center" />-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"

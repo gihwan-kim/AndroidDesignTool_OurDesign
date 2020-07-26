@@ -9,4 +9,8 @@
     <string name="text">Text</string>
     <string name="image_size">Image Size</string>
     <string name="edit_tool">Edit Tool</string>
+    <string name="positive">확인</string>
+    <string name="negative">취소</string>
+    <string name="height">높이</string>
+    <string name="width">넓이</string>
 </resources>
