@@ -22,17 +22,18 @@
             android:layout_height="match_parent"
             android:background="#f3f3f3">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="379dp"
-                android:layout_height="644dp"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/low_design"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/img1" />
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView"-->
+<!--                android:layout_width="379dp"-->
+<!--                android:layout_height="644dp"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                android:contentDescription="@string/low_design"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:srcCompat="@drawable/img1" />-->
+            <include layout="@layout/layout_grid_vertic_0200"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

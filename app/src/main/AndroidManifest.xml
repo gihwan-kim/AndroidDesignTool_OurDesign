@@ -4,14 +4,22 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+<!--
+    android:requestLegacyExternalStorage
+        앱이 범위 지정 저장소와 완전히 호환되기 전에 다음 메서드 중 하나를 사용하여 일시적으로 선택 해제할 수 있습니다.
+        Android 9(API 수준 28) 이하를 타겟팅합니다.
+        Android 10(API 수준 29) 이상을 타겟팅하는 경우 앱의 매니페스트 파일에서 requestLegacyExternalStorage의 값을 true로 설정합니다.
+-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="false">
         <activity android:name=".LowDesign.LowDesignSetLayoutActivity"
             android:parentActivityName=".LowDesign.LowDesignSetSizeActivity">
             <meta-data

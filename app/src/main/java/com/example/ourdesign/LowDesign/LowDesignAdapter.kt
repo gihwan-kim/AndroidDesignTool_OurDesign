@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.low_design_recyclerview.view.*
  *  [ layout manager ]
  *  1. onCreateViewHolder() 호출 : view holder 생성, 컨텐츠를 표시하기위해 사용하는 view 설정
  *  2. onBindViewHolder() 호출 : onCreateViewHolder() 를 호출하여 생성된 view holder 를 데이터에 바인딩
- *  3.
  */
 class LowDesignAdapter (private val myDataset: Array<String>) :
                 RecyclerView.Adapter<LowDesignAdapter.LowDesignViewHolder>(){
@@ -36,7 +35,7 @@ class LowDesignAdapter (private val myDataset: Array<String>) :
     /** [ onCreateViewHolder : 새로운 view 생성]
      *    1. layout manager 가 호출
      *    2. view holder 생성
-     *    3.. LayoutInflater : fragment 의 view, RecyclerView 에서 ViewHolder 를 만들때 사용
+     *    3. LayoutInflater : fragment 의 view, RecyclerView 에서 ViewHolder 를 만들때 사용
      *    4. LayoutInflater.from() :LayoutInflater.from을 통해 LayoutInflater를 생성
      *    5. LayoutInflater.from(parent.context).inflate(resource: Int, root: ViewGroup?, attachToRoot: Boolean)
      *       : inflater 에서 view 객체를 만든다.
